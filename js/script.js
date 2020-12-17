@@ -8,16 +8,18 @@ var root = new Vue(
   {
     el: '#root',
     data: {
+      albums: []
 
     },
 
     mounted: function() {
+      var self = this;
 
     for (var i = 1; i <= 10; i++) {
       axios.get('https://flynn.boolean.careers/exercises/api/array/music')
       .then((result) => {
-        let albums = result.data.response;
-        console.log(albums);
+        self.albums = result.data.response;
+        console.log(self.albums);
 
       });
     }
