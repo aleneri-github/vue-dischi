@@ -1,14 +1,15 @@
-// author: "Bon Jovi"
-// genre: "Rock"
-// poster: "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg"
-// title: "New Jersey"
-// year: "1988"
-
 var root = new Vue(
   {
     el: '#root',
     data: {
-      albums: []
+      albums: [],
+      selected: 'A',
+    options: [      
+      { text: 'Rock', value: 'A' },
+      { text: 'Pop', value: 'B' },
+      { text: 'Jazz', value: 'C' },
+      { text: 'Metal', value: 'D' }
+    ]
 
     },
 
@@ -23,5 +24,9 @@ var root = new Vue(
 
       });
     }
+  },
+
+  methods: {
+
   }
 })

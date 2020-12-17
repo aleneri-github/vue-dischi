@@ -14,15 +14,12 @@
   <body>
     <div id="root">
       <header>
-        <select class="genre" name="">
-          <option>Seleziona il genere</option>
-          <option value="rock">Rock</option>
-          <option value="pop">Pop</option>
-          <option value="jazz">Jazz</option>
-          <option value="metal">Metal</option>
-
+        <select v-model="selected">
+          <option v-for="option in options" v-bind:value="option.value">
+            {{ option.text }}
+          </option>
         </select>
-
+        <span> Seleziona il genere musicale </span>
       </header>
 
       <main>
