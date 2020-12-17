@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,28 +17,26 @@
   <body>
     <div id="root">
       <header>
-        <select v-model="selected">
-          <option v-for="option in options" v-bind:value="option.value">
-            {{ option.text }}
-          </option>
-        </select>
-        <span> Seleziona il genere musicale </span>
+        <i class="fab fa-spotify"></i>
+      <select v-model="selectGenre">
+        <option value="">All</option>
+        <option v-for="(genre, index) in arrayGenre">
+          {{arrayGenre [index]}}
+        </option>
+      </select>
+      <span>Select the music genre</span>
       </header>
 
       <main>
-        <div v-for="album in albums" class="box-info">
+        <div v-for="album in albums" v-if="selectGenre == album.genre || selectGenre == ''" class="box-info">
           <img :src="album.poster" alt="">
           <h1>{{album.title}}</h1>
           <h2>{{album.author}}</h2>
           <h3>{{album.genre}}</h3>
           <h4>{{album.year}}</h4>
         </div>
-
-
       </main>
-
     </div>
-
 
     <script src="js/script.js" charset="utf-8"></script>
   </body>

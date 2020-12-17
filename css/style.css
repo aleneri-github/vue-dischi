@@ -8,13 +8,13 @@
 h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 h2 {
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 13px;
-  margin-bottom: 2px;
+  margin-bottom: 15px;
 }
 
 h3 {
@@ -25,7 +25,7 @@ h3 {
 
 h4 {
   font-family: 'Merriweather Sans', sans-serif;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 span {
@@ -35,14 +35,23 @@ span {
 }
 
 header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   height: 50px;
   padding: 5px 30px;
   background-color: black;
 }
 
+i {
+  font-size: 40px;
+  color: #1DD05D;
+  padding-right: 10px;
+}
+
 select {
-  width: 300px;
-  height: 40px;
+  width: 200px;
+  height: 35px;
   color: black;
   font-size: 20px;
 }
@@ -54,7 +63,7 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 5px 20px;
+  padding: 5px;
 }
 
 .box-info {
@@ -62,14 +71,16 @@ main {
   flex-direction: column;
   align-items: center;
   height: 290px;
-  width: 200px;
-  margin: 10px 15px;
-  padding: 10px;
+  width: 230px;
+  margin: 10px 10px;
+  padding: 5px;
   text-align: center;
   background-color: #121212;
+  border: 2px solid white;
 }
 
 .box-info img {
-  max-height: 65%;
+  max-height: 67%;
   padding-bottom: 15px;
+  cursor: pointer;  
 }
