@@ -14,11 +14,22 @@ main {
   background-color: #181818;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 10px 20px;
 }
 
 .album {
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 280px;
   width: 200px;
+  margin: 10px 20px;
+  padding: 10px;
   background-color: lime;
+}
+
+.album img {
+  width: 90%;
 }
