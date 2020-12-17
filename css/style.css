@@ -19,7 +19,7 @@ main {
   padding: 10px 20px;
 }
 
-.album {
+.box-info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,6 +30,6 @@ main {
   background-color: lime;
 }
 
-.album img {
+.box-info img {
   width: 90%;
 }

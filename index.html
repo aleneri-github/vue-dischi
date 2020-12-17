@@ -16,12 +16,12 @@
       </header>
 
       <main>
-        <div v-for="" class="album">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/U2bestof19801990.jpg/220px-U2bestof19801990.jpg" alt="">
-          <h1>Titolo</h1>
-          <h2>Autore</h2>
-          <h3>Album</h3>
-          <h3>Anno</h3>
+        <div v-for="album in albums" class="box-info">
+          <img :src="album.poster" alt="">
+          <h1>{{album.title}}</h1>
+          <h2>{{album.author}}</h2>
+          <h3>{{album.genre}}</h3>
+          <h3>{{album.year}}</h3>
         </div>
 
 
