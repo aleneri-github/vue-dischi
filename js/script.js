@@ -4,7 +4,7 @@ var root = new Vue(
     data: {
       albums: [],
       selected: 'A',
-    options: [      
+    options: [
       { text: 'Rock', value: 'A' },
       { text: 'Pop', value: 'B' },
       { text: 'Jazz', value: 'C' },
