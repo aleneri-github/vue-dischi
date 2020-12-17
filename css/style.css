@@ -22,7 +22,15 @@ h3 {
 
 header {
   height: 50px;
+  padding: 5px 30px;
   background-color: black;
+}
+
+select {
+  width: 300px;
+  height: 40px;
+  color: black;
+  font-size: 20px;
 }
 
 main {
